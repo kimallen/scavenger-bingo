@@ -1,2 +1,0 @@
-class CluesController < ApplicationController
-end
