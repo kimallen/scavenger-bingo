@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
 	def index
-		@game = Game.all
+		@games = Game.all
 	end
 
 	def show
@@ -33,6 +33,7 @@ class GamesController < ApplicationController
 			redirect_to game_path(@game)
 		else
 			render edit_game_path(@game)
+		end
 	end
 
 	def destroy
