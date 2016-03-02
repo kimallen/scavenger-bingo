@@ -1,5 +1,7 @@
 <h1><%= @game.name %></h1>
 <h2>Theme: <%= @game.theme %></h2>
 
-<!-- <p><a href="/games/#{@game.id}/sample-board">Sample Board</a></p> -->
-<p><%= link_to "Sample Board", game_path("#{@game.id}/sample-board") %></p>
+<p><%= link_to "Back to Games", games_path %></p>
+
+<p><a href="/games/<%= @game.id %>/sample-board">Sample Board</a></p>
+

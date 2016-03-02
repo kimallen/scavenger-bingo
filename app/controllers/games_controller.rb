@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
 
+	before_action :authorize_user, only: [:show, :edit, :destroy]
+
 	def index
 		@games = Game.all
 	end
@@ -15,6 +17,7 @@ class GamesController < ApplicationController
 
 	def create
 		@game = Game.new(game_params)
+		p params
 		if @game.save
 			redirect_to game_path(@game)
 		else
@@ -41,9 +44,23 @@ class GamesController < ApplicationController
 		@game.destroy
 	end
 
+	def sample_board
+	@game = Game.find_by(id: params[:id])
+	@board = @game.generate_board(@game.clues)
+	@width = 5
+	@size = 5
+	end
+
 	private
   def game_params
     params.require(:game).permit(:name, :theme)
+  end
+
+  def authorize_user
+    @user = User.find_by(id: current_user.id)
+    unless @user.id == current_user.id
+      redirect_to root_path
+  	end
   end
 
 end

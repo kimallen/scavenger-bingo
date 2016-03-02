@@ -13,7 +13,7 @@ num_games.times do
 end
 
 30.times do
-  Clue.create(text: Faker::Hipster.sentence, pt_value: rand(1..4), game_id: rand(1..num_games))
+  Clue.create(text: Faker::Hipster.sentence, keyword: Faker::Hipster.word,  pt_value: rand(1..4), game_id: rand(1..num_games))
 end
 
 num_players.times do
