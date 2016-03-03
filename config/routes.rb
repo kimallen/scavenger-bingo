@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'home/index'
 
-  resources :games
-  resources :clues
+  resources :games do
+    resources :clues
+  end
   resources :rounds
   
   devise_for :users

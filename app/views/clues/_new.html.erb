@@ -1,0 +1,9 @@
+<%= form_for :clue, url: {action: "create"} do |f| %>
+	<%= f.label :text %>
+	<%= f.text_field :text %>
+	<%= f.label :keyword %>
+	<%= f.text_field :keyword %>
+	<%= f.label :pt_value %>
+	<%= f.select(:pt_value, [["1", 1], ["2", 2], ["3", 3],["4", 4]]) %>
+	<%= f.submit "Add Clue", id: "submit-clue" %>
+<% end %>
