@@ -44,15 +44,20 @@ class GamesController < ApplicationController
 	end
 
 	def sample_board
-	@game = Game.find_by(id: params[:id])
-	@board = @game.generate_board(@game.clues)
-	@width = 5
-	@size = 5
+		@game = Game.find_by(id: params[:id])
+		if @game.clues.empty?
+			flash[:error] = "Please add clues for this game"
+			redirect_to game_path(@game)
+		else
+			@board = @game.generate_board(@game.clues)
+			@width = 5
+			@size = 5
+		end
 	end
 
 	private
   def game_params
-    params.require(:game).permit(:name, :theme)
+    params.require(:game).permit(:name, :theme, :user_id)
   end
 
   def authorize_user

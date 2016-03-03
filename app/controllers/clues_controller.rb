@@ -4,13 +4,21 @@ class CluesController < ApplicationController
 	end
 
 	def create
-		p params
+		@game = Game.find(params[:game_id])
 		@clue = Clue.new(clue_params)
 		if @clue.save
 			redirect_to game_path(@game)
 		else
 			render :new
 		end
+	end
+
+	def edit
+		
+	end
+
+	def update
+		
 	end
 
 	private

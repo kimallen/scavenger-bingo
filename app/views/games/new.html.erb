@@ -3,7 +3,7 @@
 <div id="new_game">
 	<%= form_for @game do |f| %>
 		
-		<%= hidden_field(:game, :user_id, options = {value: "#{current_user.id}"}) %>
+		<%= f.hidden_field(:user_id, value: "#{current_user.id}") %>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 
