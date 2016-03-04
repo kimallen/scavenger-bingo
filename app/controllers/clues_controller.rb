@@ -13,12 +13,22 @@ class CluesController < ApplicationController
 		end
 	end
 
+	def show
+
+	end
+
 	def edit
-		
+
 	end
 
 	def update
 		
+	end
+
+	def destroy
+		@clue = Clue.find(params[:id])
+		@clue.destroy
+		redirect_to game_path(:game_id)
 	end
 
 	private

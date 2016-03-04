@@ -11,9 +11,9 @@
 	<% @game.clues.reverse.each do |clue| %>
 			<li><%= clue.text %> <br>
 			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
-			<% if clue.user.id == current_user.id %>
+			<% if current_user.id == clue.user.id %>
 				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
-				<%= link_to "Delete", game_clue_path(@game, clue), method: :delete %>
+				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
 			<% end %>
 	<% end %>
 </ul>
