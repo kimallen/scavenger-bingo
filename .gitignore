@@ -1,0 +1,17 @@
+/config/secrets.yml
+/config/database.yml
+/config/secret_token.rb
+/.bundle
+/log/*
+!/log/.keep
+/tmp
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore uploaded images
+/public/system/**
+
+.DS_Store
+.byebug_history
+

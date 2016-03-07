@@ -1,0 +1,22 @@
+<h1><%= @game.name %></h1>
+<h2>Theme: <%= @game.theme %></h2>
+<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
+<p><%= link_to "Back to Games", games_path %></p>
+<p><%= flash[:error] %></p>
+<p><a href="/games/<%= @game.id %>/sample-board">Sample Board</a></p>
+
+<h3>Your clue list:</h3>
+<%= render "clues/new" %>
+<ul id='clue_list'>	
+	<% @game.clues.reverse.each do |clue| %>
+			<li><%= clue.text %> <br>
+			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
+			<% if current_user.id == clue.user.id %>
+				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
+				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
+			<% end %>
+	<% end %>
+</ul>
+
+
+	

@@ -1,0 +1,14 @@
+<p><a href="/games/<%= @game.id %>">Return to game page</a></p>
+
+	<table>	
+	<% @width.times do %>
+		<tr>
+			<% @board[(@size-@width)..(@size-1)].each do |clue| %>
+				<td><%=clue.keyword%></td>
+			<% end %>
+		</tr>
+		<% @size += 5 %>
+	<% end %>
+
+	</table>
+
