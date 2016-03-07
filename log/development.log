@@ -10659,3 +10659,1036 @@ ActionController::RoutingError (No route matches [GET] "/games"):
   Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
   Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (228.7ms)
+
+
+Started GET "/games" for ::1 at 2016-03-07 13:15:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (27.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (7.7ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 74ms (Views: 42.8ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:15:21 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (24.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (1.8ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (680.7ms)
+  [1m[35mClue Load (24.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (8.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (826.2ms)
+Completed 200 OK in 902ms (Views: 799.8ms | ActiveRecord: 66.3ms)
+
+
+Started GET "/games/1/clues/56/edit" for ::1 at 2016-03-07 13:15:33 -0800
+Processing by CluesController#edit as HTML
+  Parameters: {"game_id"=>"1", "id"=>"56"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template clues/edit, application/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/kallen/code-projects/scavenger-bingo/app/views"
+  * "/Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/devise-3.5.3/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (132.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (98.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (219.3ms)
+
+
+Started POST "/games/1/clues" for ::1 at 2016-03-07 13:24:26 -0800
+Processing by CluesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vxy7/NU2wwfl5cfLAKItifR56aTs96hH1xtKHD0Yseds+10BPNZ+ZZ0qWwKDbpQGIFqv4nZ0DIyVpoTbpaYg/Q==", "clue"=>{"game_id"=>"1", "text"=>"una mas", "keyword"=>"mas", "pt_value"=>"1"}, "commit"=>"Add Clue", "game_id"=>"1"}
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (18.8ms)[0m  [1mINSERT INTO "clues" ("game_id", "text", "keyword", "pt_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["game_id", 1], ["text", "una mas"], ["keyword", "mas"], ["pt_value", 1], ["created_at", "2016-03-07 21:24:26.317383"], ["updated_at", "2016-03-07 21:24:26.317383"]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 35ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:24:26 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (2.9ms)
+  [1m[35mClue Load (0.6ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 67ms (Views: 60.8ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/games/1/clues" for ::1 at 2016-03-07 13:26:41 -0800
+Processing by CluesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P3hlKVSPoW22MV4C328flPb7zAtnUo48f3SM7HgO26rsn4PUvW8cD87+wstco6YbItiKTf3RKvc9yUIr4LBKsA==", "clue"=>{"game_id"=>"1", "text"=>"testing", "keyword"=>"test", "pt_value"=>"2"}, "commit"=>"Add Clue", "game_id"=>"1"}
+  [1m[35mGame Load (1.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clues" ("game_id", "text", "keyword", "pt_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["game_id", 1], ["text", "testing"], ["keyword", "test"], ["pt_value", 2], ["created_at", "2016-03-07 21:26:41.928027"], ["updated_at", "2016-03-07 21:26:41.928027"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:26:41 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (3.5ms)
+  [1m[36mClue Load (1.9ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (106.3ms)
+Completed 200 OK in 119ms (Views: 111.3ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/games/1/clues" for ::1 at 2016-03-07 13:28:10 -0800
+Processing by CluesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fj78haalWfeQMNgSQGWHLG9HNdGSBBv4I3ND48OcbXvF2Rp4T0Xklej/RNvDqT6ju2RzlwiHvzNhzo0kWyL8YQ==", "clue"=>{"game_id"=>"1", "text"=>"otravez", "keyword"=>"otra", "pt_value"=>"1"}, "commit"=>"Add Clue", "game_id"=>"1"}
+  [1m[35mGame Load (0.9ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clues" ("game_id", "text", "keyword", "pt_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["game_id", 1], ["text", "otravez"], ["keyword", "otra"], ["pt_value", 1], ["created_at", "2016-03-07 21:28:10.066068"], ["updated_at", "2016-03-07 21:28:10.066068"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:28:10 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (3.0ms)
+  [1m[36mClue Load (0.5ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/games/1/clues" for ::1 at 2016-03-07 13:30:32 -0800
+Processing by CluesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CNbFftQq8mO12HOCcibkjyVAmYJ9//gnkelx67NVFnPbMSODPcpPAc0X70vx6l0A8WPfxOd8XOzTVL8sK+uHaQ==", "clue"=>{"game_id"=>"1", "text"=>"another", "keyword"=>"one", "pt_value"=>"1"}, "commit"=>"Add Clue", "game_id"=>"1"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("game_id", "text", "keyword", "pt_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["game_id", 1], ["text", "another"], ["keyword", "one"], ["pt_value", 1], ["created_at", "2016-03-07 21:30:32.948068"], ["updated_at", "2016-03-07 21:30:32.948068"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:30:32 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (2.5ms)
+  [1m[35mClue Load (0.5ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 88ms (Views: 81.9ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/games/1/clues" for ::1 at 2016-03-07 13:31:08 -0800
+Processing by CluesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5RfJv7zXAXyD7hJaGr3J/TVOmsB1DWEtS6+EbohKxwoc7nbFxPhZ4rAJIDrpk6oIPZ8LZtXkU/3k3DWIp+6Bg==", "clue"=>{"game_id"=>"1", "text"=>"ugaugaugua", "keyword"=>"ug", "pt_value"=>"1"}, "commit"=>"Add Clue", "game_id"=>"1"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("game_id", "text", "keyword", "pt_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["game_id", 1], ["text", "ugaugaugua"], ["keyword", "ug"], ["pt_value", 1], ["created_at", "2016-03-07 21:31:08.153193"], ["updated_at", "2016-03-07 21:31:08.153193"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:31:08 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (2.3ms)
+  [1m[35mClue Load (1.2ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 88ms (Views: 80.6ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/games/1/clues" for ::1 at 2016-03-07 13:38:41 -0800
+Processing by CluesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e57cK/VeHq3FXUQ7Dx9K5URofbPmU6NBWnoGzh/mYiioeTrWHL6jz72S2PKM0/NqkEs79XzQB4oYx8gJh1jzMg==", "clue"=>{"game_id"=>"1", "text"=>"jquery", "keyword"=>"added", "pt_value"=>"1"}, "commit"=>"Add Clue", "game_id"=>"1"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clues" ("game_id", "text", "keyword", "pt_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["game_id", 1], ["text", "jquery"], ["keyword", "added"], ["pt_value", 1], ["created_at", "2016-03-07 21:38:41.688794"], ["updated_at", "2016-03-07 21:38:41.688794"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/games/1
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:38:41 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (1.9ms)
+  [1m[36mClue Load (0.6ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 76ms (Views: 69.7ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/games/1/clues/75" for ::1 at 2016-03-07 13:38:56 -0800
+Processing by CluesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QMa7uA9P26kHN1iaQuJ5aTR20R7JOEixqYKEdJxqXWiTIV1F5q9my3/4xFPBLsDm4FWXWFO77HrrP0qzBNTMcg==", "game_id"=>"1", "id"=>"75"}
+  [1m[35mClue Load (1.7ms)[0m  SELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1  [["id", 75]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "clues" WHERE "clues"."id" = $1  [["id", 75]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/games/game_id
+Completed 302 Found in 14ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/games/game_id" for ::1 at 2016-03-07 13:38:56 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"game_id"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=game_id):
+  app/controllers/games_controller.rb:10:in `show'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (101.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (223.3ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:42:45 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (2.1ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 91ms (Views: 86.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:42:49 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (2.1ms)
+  [1m[36mClue Load (0.5ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (66.6ms)
+Completed 200 OK in 79ms (Views: 73.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:52:05 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (1.9ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:54:08 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (1.8ms)
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:54:23 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (1.8ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 88ms (Views: 82.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 13:57:01 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (681.2ms)
+  [1m[36mClue Load (0.6ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (822.8ms)
+Completed 200 OK in 916ms (Views: 835.5ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 14:19:15 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (1.8ms)
+  [1m[35mClue Load (0.5ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 77ms (Views: 70.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/games/1" for ::1 at 2016-03-07 14:22:39 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (1.7ms)
+  [1m[36mClue Load (0.6ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 2405ms (Views: 2399.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/assets/application.self-0312841796bebe9b93a5bb9d97306af35de0ddc2593ab310fd9d1d6cad3510ee.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800

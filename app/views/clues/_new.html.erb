@@ -1,10 +1,13 @@
-<%= form_for :clue, url: game_clues_path(@game.id) do |f| %>
-	<%= f.hidden_field :game_id, value: @game.id %>
-	<%= f.label :text %>
-	<%= f.text_field :text %>
-	<%= f.label :keyword %>
-	<%= f.text_field :keyword %>
-	<%= f.label :pt_value %>
-	<%= f.select(:pt_value, [["1", 1], ["2", 2], ["3", 3],["4", 4]]) %>
-	<%= f.submit "Add Clue", id: "submit-clue" %>
-<% end %>
+
+<div id="add_clue">
+	<%= form_for :clue, url: game_clues_path(@game.id), html: {id: "add_clue_form"} do |f| %>
+		<%= f.hidden_field :game_id, value: @game.id %>
+		<%= f.label :text %>
+		<%= f.text_field :text %>
+		<%= f.label :keyword %>
+		<%= f.text_field :keyword %>
+		<%= f.label :pt_value %>
+		<%= f.select(:pt_value, [["1", 1], ["2", 2], ["3", 3],["4", 4]]) %>
+		<%= f.submit "Add Clue", id: "submit-clue" %>
+	<% end %>
+</div>
