@@ -4,16 +4,23 @@
 
 //= require_tree .
 $(document).ready(function(){
-console.log("document ready")
 clueFormListener()
 
 })
 
 function clueFormListener(){
-	console.log("inside clueFormListener")
+	
 	$("#add_clue").on("submit", "#add_clue_form", function(e){
 		e.preventDefault();
-		console.log("inside preventDefault")
+		
+		var route = 
+		var formData = $(this).serialize()
+		var request = $.ajax({
+				url: route,
+				method: 'post',
+				data: formData
+
+		})
 	})
 }
 
