@@ -11692,3 +11692,1588 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-0312841796bebe9b93a5bb9d97306af35de0ddc2593ab310fd9d1d6cad3510ee.js?body=1" for ::1 at 2016-03-07 14:22:42 -0800
+
+
+Started GET "/" for ::1 at 2016-03-10 09:48:06 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (26.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_session_links.html.erb (8.1ms)
+  Rendered home/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 711ms (Views: 695.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 09:48:07 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 09:48:08 -0800
+
+
+Started GET "/games" for ::1 at 2016-03-10 09:48:13 -0800
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (17.9ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 98ms (Views: 54.0ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:48:17 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/games_controller.rb:64:in `authorize_user'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (788.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (921.1ms)
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:49:38 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (1.9ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (17.1ms)
+  [1m[35mClue Load (25.9ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (72.5ms)
+Completed 200 OK in 140ms (Views: 82.7ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:49:39 -0800
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:50:38 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.0ms)
+  [1m[35mClue Load (0.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 09:50:38 -0800
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:51:47 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (3.2ms)
+  [1m[35mClue Load (0.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:51:47 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 09:51:48 -0800
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:52:15 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (8.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered games/show.html.erb within layouts/application (52.8ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 22.4ms)
+
+ActionView::Template::Error (undefined method `name' for #<User:0x007fb2d5ab6398>):
+    1: <h1><%= @game.name %></h1>
+    2: <h2>Theme: <%= @game.theme %></h2>
+    3: <p>Game created by: <%= @game.user.name %></p>
+    4: <% if current_user %>
+    5: 	<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
+    6: 	<% end %>
+  app/views/games/show.html.erb:3:in `_app_views_games_show_html_erb__1860882507030313203_70203050929580'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (101.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (222.7ms)
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:55:14 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mClue Load (0.3ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 09:55:15 -0800
+  [1m[36mGame Load (1.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."name" = $1 LIMIT 1[0m  [["name", "beard"]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+
+
+Started GET "/games" for ::1 at 2016-03-10 09:57:48 -0800
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/games" for ::1 at 2016-03-10 09:58:43 -0800
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 09:58:43 -0800
+
+
+Started GET "/games/3" for ::1 at 2016-03-10 09:58:49 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mGame Load (0.5ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mClue Load (0.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 09:58:51 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_session_links.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 10:00:54 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_session_links.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:00:55 -0800
+
+
+Started GET "/users/sign_in" for ::1 at 2016-03-10 10:01:59 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 82ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-10 10:02:10 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"plLXgdmRQUOOvHX4ZAo0XfxQ5gX9cSnRoM8PrVmovoLtP3TQ2Pvguj+UK1Jmb7H+iR90HgDnvG9BUjnHgSoP0A==", "user"=>{"email"=>"dot@dot.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "dot@dot.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2016-03-10 18:02:10.748192"], ["sign_in_count", 2], ["updated_at", "2016-03-10 18:02:10.752399"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 140ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 10:02:10 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/shared/_session_links.html.erb (2.7ms)
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 10:04:40 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/shared/_session_links.html.erb (2.7ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:04:40 -0800
+
+
+Started GET "/games" for ::1 at 2016-03-10 10:11:17 -0800
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/shared/_session_links.html.erb (3.3ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/games/4" for ::1 at 2016-03-10 10:11:20 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered clues/_new.html.erb (2.2ms)
+  [1m[35mClue Load (0.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 4]]
+  Rendered games/show.html.erb within layouts/application (12.0ms)
+  Rendered devise/shared/_session_links.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 1.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (5050.7ms)[0m  [1mDROP DATABASE IF EXISTS "scavenger-bingo_development"[0m
+PG::ObjectInUse: ERROR:  database "scavenger-bingo_development" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+: DROP DATABASE IF EXISTS "scavenger-bingo_development"
+  [1m[35m (121.6ms)[0m  DROP DATABASE IF EXISTS "scavenger-bingo_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "scavenger-bingo_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "scavenger-bingo_development" already exists
+: CREATE DATABASE "scavenger-bingo_development" ENCODING = 'unicode'
+  [1m[35m (616.3ms)[0m  CREATE DATABASE "scavenger-bingo_test" ENCODING = 'unicode'
+  [1m[36mSQL (4.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (23.3ms)[0m  DROP TABLE "clues" CASCADE
+  [1m[36m (52.6ms)[0m  [1mCREATE TABLE "clues" ("id" serial primary key, "text" character varying, "keyword" character varying, "pt_value" integer, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  DROP TABLE "games" CASCADE
+  [1m[36m (7.7ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "theme" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  DROP TABLE "player_rounds" CASCADE
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "player_rounds" ("id" serial primary key, "player_id" integer, "round_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  DROP TABLE "players" CASCADE
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  DROP TABLE "rounds" CASCADE
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "rounds" ("id" serial primary key, "url_ext" character varying, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (7.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "clues" ("id" serial primary key, "text" character varying, "keyword" character varying, "pt_value" integer, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "theme" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "player_rounds" ("id" serial primary key, "player_id" integer, "round_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "rounds" ("id" serial primary key, "url_ext" character varying, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223001034')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000116')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223000134')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000141')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223000149')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000202')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'arnulfo@koepp.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'izaiah@cummings.org' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "games" ("name", "theme", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "selfies"], ["theme", "gooses"], ["user_id", 2], ["created_at", "2016-03-10 18:13:24.450766"], ["updated_at", "2016-03-10 18:13:24.450766"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("name", "theme", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "DIY"], ["theme", "lycanthropes"], ["user_id", 2], ["created_at", "2016-03-10 18:13:24.455237"], ["updated_at", "2016-03-10 18:13:24.455237"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Thundercats single-origin coffee pickled church-key scenester portland."], ["keyword", "truffaut"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.470526"], ["updated_at", "2016-03-10 18:13:24.470526"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Ramps butcher gluten-free pork belly fingerstache synth disrupt 3 wolf moon deep v."], ["keyword", "lomo"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.474426"], ["updated_at", "2016-03-10 18:13:24.474426"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Deep v flexitarian helvetica drinking."], ["keyword", "leggings"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.477243"], ["updated_at", "2016-03-10 18:13:24.477243"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Small batch flannel echo craft beer fixie photo booth."], ["keyword", "ennui"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.480021"], ["updated_at", "2016-03-10 18:13:24.480021"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Occupy drinking heirloom narwhal bicycle rights gastropub vinegar."], ["keyword", "bushwick"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.482753"], ["updated_at", "2016-03-10 18:13:24.482753"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Williamsburg neutra humblebrag meggings tofu."], ["keyword", "leggings"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.485606"], ["updated_at", "2016-03-10 18:13:24.485606"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Plaid stumptown park try-hard vegan pbr&b thundercats messenger bag."], ["keyword", "dreamcatcher"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.488290"], ["updated_at", "2016-03-10 18:13:24.488290"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Wes anderson pinterest bitters wayfarers selfies occupy."], ["keyword", "locavore"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.491074"], ["updated_at", "2016-03-10 18:13:24.491074"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Microdosing typewriter church-key echo before they sold out."], ["keyword", "cray"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.493781"], ["updated_at", "2016-03-10 18:13:24.493781"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Yolo street single-origin coffee austin."], ["keyword", "heirloom"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.496391"], ["updated_at", "2016-03-10 18:13:24.496391"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Mlkshk asymmetrical fingerstache pug brooklyn health cray 8-bit retro."], ["keyword", "organic"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.499151"], ["updated_at", "2016-03-10 18:13:24.499151"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Artisan hammock mustache chia wes anderson readymade."], ["keyword", "kickstarter"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.501796"], ["updated_at", "2016-03-10 18:13:24.501796"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Humblebrag swag yr fingerstache xoxo goth kogi actually."], ["keyword", "iPhone"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.504511"], ["updated_at", "2016-03-10 18:13:24.504511"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Selvage street shabby chic tacos roof tote bag."], ["keyword", "iPhone"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.507154"], ["updated_at", "2016-03-10 18:13:24.507154"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Wolf godard truffaut mixtape."], ["keyword", "venmo"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.509788"], ["updated_at", "2016-03-10 18:13:24.509788"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Stumptown chia asymmetrical literally etsy fingerstache umami whatever."], ["keyword", "shoreditch"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.512384"], ["updated_at", "2016-03-10 18:13:24.512384"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Master leggings before they sold out direct trade viral."], ["keyword", "hoodie"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.514956"], ["updated_at", "2016-03-10 18:13:24.514956"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Bespoke meditation vinegar carry park."], ["keyword", "wolf"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.517574"], ["updated_at", "2016-03-10 18:13:24.517574"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Vice chartreuse tattooed shabby chic 8-bit."], ["keyword", "beard"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.520350"], ["updated_at", "2016-03-10 18:13:24.520350"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Cleanse readymade distillery polaroid."], ["keyword", "tousled"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.523144"], ["updated_at", "2016-03-10 18:13:24.523144"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Austin letterpress skateboard everyday chia park brooklyn literally intelligentsia."], ["keyword", "carry"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.525871"], ["updated_at", "2016-03-10 18:13:24.525871"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Bushwick schlitz occupy cray leggings health meh."], ["keyword", "banjo"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.528688"], ["updated_at", "2016-03-10 18:13:24.528688"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Slow-carb blog squid schlitz."], ["keyword", "yr"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.531476"], ["updated_at", "2016-03-10 18:13:24.531476"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Photo booth pug sustainable fap lomo iphone."], ["keyword", "cronut"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.534113"], ["updated_at", "2016-03-10 18:13:24.534113"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Direct trade scenester cleanse kombucha thundercats sustainable."], ["keyword", "cliche"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.536920"], ["updated_at", "2016-03-10 18:13:24.536920"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Literally listicle pbr&b yolo keytar."], ["keyword", "chambray"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.539619"], ["updated_at", "2016-03-10 18:13:24.539619"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Cleanse retro drinking meh cardigan tousled mumblecore direct trade."], ["keyword", "plaid"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.542245"], ["updated_at", "2016-03-10 18:13:24.542245"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Twee bitters bespoke whatever skateboard lo-fi."], ["keyword", "gentrify"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.544954"], ["updated_at", "2016-03-10 18:13:24.544954"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Chartreuse whatever squid thundercats kinfolk diy."], ["keyword", "kombucha"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.547903"], ["updated_at", "2016-03-10 18:13:24.547903"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Keytar brooklyn thundercats 3 wolf moon aesthetic hammock messenger bag art party beard."], ["keyword", "echo"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.550709"], ["updated_at", "2016-03-10 18:13:24.550709"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lorine Ullrich"], ["phone", "250-285-5287"], ["created_at", "2016-03-10 18:13:24.564089"], ["updated_at", "2016-03-10 18:13:24.564089"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Dorian Trantow"], ["phone", "(402) 757-7555"], ["created_at", "2016-03-10 18:13:24.567797"], ["updated_at", "2016-03-10 18:13:24.567797"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Izabella Kulas II"], ["phone", "1-761-307-6888"], ["created_at", "2016-03-10 18:13:24.570768"], ["updated_at", "2016-03-10 18:13:24.570768"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Dejon Frami"], ["phone", "(986) 249-2379 x8562"], ["created_at", "2016-03-10 18:13:24.573490"], ["updated_at", "2016-03-10 18:13:24.573490"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mr. Rylee Schaefer"], ["phone", "1-436-013-1705 x86900"], ["created_at", "2016-03-10 18:13:24.576454"], ["updated_at", "2016-03-10 18:13:24.576454"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "bogan"], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.590546"], ["updated_at", "2016-03-10 18:13:24.590546"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "shields"], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.600676"], ["updated_at", "2016-03-10 18:13:24.600676"]]
+  [1m[35m (4.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "croninstiedemann"], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.608503"], ["updated_at", "2016-03-10 18:13:24.608503"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "bechtelar"], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.611593"], ["updated_at", "2016-03-10 18:13:24.611593"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "heathcote"], ["game_id", 2], ["created_at", "2016-03-10 18:13:24.614433"], ["updated_at", "2016-03-10 18:13:24.614433"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "gislason"], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.617586"], ["updated_at", "2016-03-10 18:13:24.617586"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "bradtkesmith"], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.620482"], ["updated_at", "2016-03-10 18:13:24.620482"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "heel"], ["game_id", 1], ["created_at", "2016-03-10 18:13:24.623114"], ["updated_at", "2016-03-10 18:13:24.623114"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'philip.herzog@schimmel.org' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'laury@howellroob.info' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "games" ("name", "theme", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "pabst"], ["theme", "vixens"], ["user_id", 2], ["created_at", "2016-03-10 18:13:35.940563"], ["updated_at", "2016-03-10 18:13:35.940563"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("name", "theme", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "meditation"], ["theme", "druids"], ["user_id", 2], ["created_at", "2016-03-10 18:13:35.946634"], ["updated_at", "2016-03-10 18:13:35.946634"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Hella artisan beard drinking hoodie skateboard twee."], ["keyword", "normcore"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:35.961675"], ["updated_at", "2016-03-10 18:13:35.961675"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Kickstarter tattooed fingerstache freegan gluten-free disrupt celiac selfies chillwave."], ["keyword", "loko"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:35.965488"], ["updated_at", "2016-03-10 18:13:35.965488"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Celiac migas craft beer fap twee pinterest leggings meditation."], ["keyword", "fap"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:35.968420"], ["updated_at", "2016-03-10 18:13:35.968420"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Squid synth shoreditch austin blue bottle."], ["keyword", "organic"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.971217"], ["updated_at", "2016-03-10 18:13:35.971217"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Tacos intelligentsia +1 squid godard trust fund leggings wayfarers chillwave."], ["keyword", "etsy"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:35.973940"], ["updated_at", "2016-03-10 18:13:35.973940"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Disrupt twee hammock helvetica artisan waistcoat tofu heirloom vhs."], ["keyword", "drinking"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.976679"], ["updated_at", "2016-03-10 18:13:35.976679"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Master vegan normcore hoodie shabby chic keytar +1 tote bag."], ["keyword", "paleo"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.979416"], ["updated_at", "2016-03-10 18:13:35.979416"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Plaid art party taxidermy chillwave whatever poutine locavore single-origin coffee hoodie."], ["keyword", "vegan"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:35.982050"], ["updated_at", "2016-03-10 18:13:35.982050"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Pour-over kickstarter wayfarers twee xoxo."], ["keyword", "pitchfork"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.984655"], ["updated_at", "2016-03-10 18:13:35.984655"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Normcore umami chartreuse park chambray fashion axe everyday."], ["keyword", "chicharrones"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.987239"], ["updated_at", "2016-03-10 18:13:35.987239"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Tattooed mustache yolo chartreuse sriracha tilde tumblr."], ["keyword", "90's"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.989857"], ["updated_at", "2016-03-10 18:13:35.989857"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Intelligentsia cred meditation locavore tousled forage pitchfork paleo 8-bit."], ["keyword", "williamsburg"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.992589"], ["updated_at", "2016-03-10 18:13:35.992589"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Park fingerstache gastropub migas."], ["keyword", "selvage"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:13:35.995321"], ["updated_at", "2016-03-10 18:13:35.995321"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Asymmetrical fap before they sold out vinyl waistcoat readymade xoxo."], ["keyword", "cleanse"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:35.998001"], ["updated_at", "2016-03-10 18:13:35.998001"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Selfies park vinegar banjo migas seitan literally photo booth chambray."], ["keyword", "stumptown"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.000855"], ["updated_at", "2016-03-10 18:13:36.000855"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Tofu ramps lo-fi cronut single-origin coffee."], ["keyword", "fingerstache"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.003639"], ["updated_at", "2016-03-10 18:13:36.003639"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Hella tattooed meggings yr try-hard church-key bushwick readymade mixtape."], ["keyword", "butcher"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.006266"], ["updated_at", "2016-03-10 18:13:36.006266"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Offal photo booth vinegar hammock."], ["keyword", "hammock"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.008938"], ["updated_at", "2016-03-10 18:13:36.008938"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Skateboard post-ironic cray normcore humblebrag."], ["keyword", "kogi"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.011618"], ["updated_at", "2016-03-10 18:13:36.011618"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Bitters meh sriracha narwhal pinterest intelligentsia knausgaard gentrify."], ["keyword", "carry"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.014254"], ["updated_at", "2016-03-10 18:13:36.014254"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Tote bag carry migas banjo asymmetrical."], ["keyword", "cred"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.016881"], ["updated_at", "2016-03-10 18:13:36.016881"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Pbr&b put a bird on it roof brunch pabst paleo biodiesel."], ["keyword", "intelligentsia"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.019618"], ["updated_at", "2016-03-10 18:13:36.019618"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Portland fingerstache pour-over slow-carb."], ["keyword", "pinterest"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.022244"], ["updated_at", "2016-03-10 18:13:36.022244"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Occupy etsy irony leggings selvage try-hard cray."], ["keyword", "bitters"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.024839"], ["updated_at", "2016-03-10 18:13:36.024839"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Photo booth shabby chic single-origin coffee fanny pack vegan pabst umami."], ["keyword", "polaroid"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.027516"], ["updated_at", "2016-03-10 18:13:36.027516"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Flannel retro artisan everyday schlitz keffiyeh direct trade."], ["keyword", "waistcoat"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.030759"], ["updated_at", "2016-03-10 18:13:36.030759"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Occupy helvetica umami wolf 3 wolf moon heirloom vhs readymade."], ["keyword", "fap"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.033603"], ["updated_at", "2016-03-10 18:13:36.033603"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Pork belly fashion axe irony forage."], ["keyword", "retro"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.036268"], ["updated_at", "2016-03-10 18:13:36.036268"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Single-origin coffee raw denim listicle literally trust fund yr ennui."], ["keyword", "polaroid"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.039202"], ["updated_at", "2016-03-10 18:13:36.039202"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Pbr&b kombucha flexitarian paleo readymade franzen."], ["keyword", "beard"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.042062"], ["updated_at", "2016-03-10 18:13:36.042062"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ryder Mann"], ["phone", "1-997-128-5404 x675"], ["created_at", "2016-03-10 18:13:36.055966"], ["updated_at", "2016-03-10 18:13:36.055966"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Jeremie Gorczany I"], ["phone", "229-564-8332 x7167"], ["created_at", "2016-03-10 18:13:36.059575"], ["updated_at", "2016-03-10 18:13:36.059575"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Hester Tremblay"], ["phone", "1-748-300-4777 x69244"], ["created_at", "2016-03-10 18:13:36.062317"], ["updated_at", "2016-03-10 18:13:36.062317"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Monte Christiansen"], ["phone", "822-309-0176"], ["created_at", "2016-03-10 18:13:36.064989"], ["updated_at", "2016-03-10 18:13:36.064989"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Myah Konopelski"], ["phone", "762.881.3853 x821"], ["created_at", "2016-03-10 18:13:36.067733"], ["updated_at", "2016-03-10 18:13:36.067733"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "gutmann"], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.081382"], ["updated_at", "2016-03-10 18:13:36.081382"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "howell"], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.084958"], ["updated_at", "2016-03-10 18:13:36.084958"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "bruen"], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.087729"], ["updated_at", "2016-03-10 18:13:36.087729"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "gibsondaugherty"], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.090328"], ["updated_at", "2016-03-10 18:13:36.090328"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "mertz"], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.093009"], ["updated_at", "2016-03-10 18:13:36.093009"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "roberts"], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.095706"], ["updated_at", "2016-03-10 18:13:36.095706"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "osinskiglover"], ["game_id", 1], ["created_at", "2016-03-10 18:13:36.098297"], ["updated_at", "2016-03-10 18:13:36.098297"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "weinatboyle"], ["game_id", 2], ["created_at", "2016-03-10 18:13:36.101364"], ["updated_at", "2016-03-10 18:13:36.101364"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-03-10 10:14:26 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/shared/_session_links.html.erb (2.9ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-10 10:14:27 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered devise/shared/_session_links.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:14:27 -0800
+
+
+Started GET "/games" for ::1 at 2016-03-10 10:14:31 -0800
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.erb within layouts/application (2.6ms)
+  Rendered devise/shared/_session_links.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:14:36 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered games/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <h1><%= @game.name %></h1>
+    2: <h2>Theme: <%= @game.theme %></h2>
+    3: <p>Creator: <%= @game.user.email %></p>
+    4: 
+    5: <% if current_user %>
+    6: 	<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
+  app/views/games/show.html.erb:3:in `_app_views_games_show_html_erb__1860882507030313203_70203048501780'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (108.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (240.7ms)
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:15:30 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered games/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <h1><%= @game.name %></h1>
+    2: <h2>Theme: <%= @game.theme %></h2>
+    3: <p>Creator: <%= @game.user.email %></p>
+    4: 
+    5: <% if current_user %>
+    6: 	<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
+  app/views/games/show.html.erb:3:in `_app_views_games_show_html_erb__1860882507030313203_70203048501780'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (96.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (215.4ms)
+  [1m[36mGame Load (0.7ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."name" = $1 LIMIT 1[0m  [["name", "DIY"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (5040.6ms)[0m  [1mDROP DATABASE IF EXISTS "scavenger-bingo_development"[0m
+PG::ObjectInUse: ERROR:  database "scavenger-bingo_development" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+: DROP DATABASE IF EXISTS "scavenger-bingo_development"
+  [1m[35m (117.9ms)[0m  DROP DATABASE IF EXISTS "scavenger-bingo_test"
+  [1m[36m (1.3ms)[0m  [1mCREATE DATABASE "scavenger-bingo_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "scavenger-bingo_development" already exists
+: CREATE DATABASE "scavenger-bingo_development" ENCODING = 'unicode'
+  [1m[35m (247.2ms)[0m  CREATE DATABASE "scavenger-bingo_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.9ms)[0m  DROP TABLE "clues" CASCADE
+  [1m[36m (12.2ms)[0m  [1mCREATE TABLE "clues" ("id" serial primary key, "text" character varying, "keyword" character varying, "pt_value" integer, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  DROP TABLE "games" CASCADE
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "theme" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  DROP TABLE "player_rounds" CASCADE
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "player_rounds" ("id" serial primary key, "player_id" integer, "round_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  DROP TABLE "players" CASCADE
+  [1m[36m (23.2ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  DROP TABLE "rounds" CASCADE
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "rounds" ("id" serial primary key, "url_ext" character varying, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "clues" ("id" serial primary key, "text" character varying, "keyword" character varying, "pt_value" integer, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (13.2ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "theme" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "player_rounds" ("id" serial primary key, "player_id" integer, "round_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.3ms)[0m  CREATE TABLE "rounds" ("id" serial primary key, "url_ext" character varying, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223001034')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000116')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223000134')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000141')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223000149')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000202')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'krystal.dickens@stehr.org' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (5041.1ms)[0m  [1mDROP DATABASE IF EXISTS "scavenger-bingo_development"[0m
+PG::ObjectInUse: ERROR:  database "scavenger-bingo_development" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+: DROP DATABASE IF EXISTS "scavenger-bingo_development"
+  [1m[35m (124.3ms)[0m  DROP DATABASE IF EXISTS "scavenger-bingo_test"
+  [1m[36m (0.9ms)[0m  [1mCREATE DATABASE "scavenger-bingo_development" ENCODING = 'unicode'[0m
+PG::DuplicateDatabase: ERROR:  database "scavenger-bingo_development" already exists
+: CREATE DATABASE "scavenger-bingo_development" ENCODING = 'unicode'
+  [1m[35m (245.9ms)[0m  CREATE DATABASE "scavenger-bingo_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.2ms)[0m  DROP TABLE "clues" CASCADE
+  [1m[36m (7.3ms)[0m  [1mCREATE TABLE "clues" ("id" serial primary key, "text" character varying, "keyword" character varying, "pt_value" integer, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  DROP TABLE "games" CASCADE
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "theme" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  DROP TABLE "player_rounds" CASCADE
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "player_rounds" ("id" serial primary key, "player_id" integer, "round_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  DROP TABLE "players" CASCADE
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  DROP TABLE "rounds" CASCADE
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "rounds" ("id" serial primary key, "url_ext" character varying, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.5ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "clues" ("id" serial primary key, "text" character varying, "keyword" character varying, "pt_value" integer, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "theme" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "player_rounds" ("id" serial primary key, "player_id" integer, "round_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.5ms)[0m  CREATE TABLE "rounds" ("id" serial primary key, "url_ext" character varying, "game_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223001034')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000116')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223000134')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000141')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160223000149')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160223000202')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'isai@steuberhilpert.biz' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "isai@steuberhilpert.biz"], ["encrypted_password", "$2a$10$YlQYnRk6nRtHlStsH1X88OyCL01JvsIIAgYO3HfGEP.6uALJKx10q"], ["created_at", "2016-03-10 18:18:35.786074"], ["updated_at", "2016-03-10 18:18:35.786074"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'xzavier@corkeryhartmann.io' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "xzavier@corkeryhartmann.io"], ["encrypted_password", "$2a$10$l1/iVK9CGXA406jQw7fkzeIvG3.wNvt5MOHQRFuil30FLR1oZyuOS"], ["created_at", "2016-03-10 18:18:35.885521"], ["updated_at", "2016-03-10 18:18:35.885521"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "games" ("name", "theme", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cold-pressed"], ["theme", "oxen"], ["user_id", 1], ["created_at", "2016-03-10 18:18:35.906892"], ["updated_at", "2016-03-10 18:18:35.906892"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("name", "theme", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "listicle"], ["theme", "chimeras"], ["user_id", 1], ["created_at", "2016-03-10 18:18:35.911129"], ["updated_at", "2016-03-10 18:18:35.911129"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Sriracha whatever green juice butcher bicycle rights +1 pinterest cornhole wes anderson."], ["keyword", "ethical"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.925723"], ["updated_at", "2016-03-10 18:18:35.925723"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Church-key williamsburg listicle butcher locavore meh."], ["keyword", "bushwick"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.929497"], ["updated_at", "2016-03-10 18:18:35.929497"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Crucifix portland gluten-free meditation food truck sartorial chia bespoke five dollar toast."], ["keyword", "keytar"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.932652"], ["updated_at", "2016-03-10 18:18:35.932652"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Selfies raw denim bicycle rights asymmetrical locavore."], ["keyword", "roof"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.935498"], ["updated_at", "2016-03-10 18:18:35.935498"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Literally freegan irony vhs fixie salvia mustache brooklyn chillwave."], ["keyword", "goth"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.938176"], ["updated_at", "2016-03-10 18:18:35.938176"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Wolf etsy williamsburg readymade."], ["keyword", "kinfolk"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.940970"], ["updated_at", "2016-03-10 18:18:35.940970"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Hashtag keytar master butcher."], ["keyword", "truffaut"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.944087"], ["updated_at", "2016-03-10 18:18:35.944087"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Cleanse quinoa try-hard lo-fi skateboard seitan."], ["keyword", "everyday"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.946812"], ["updated_at", "2016-03-10 18:18:35.946812"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Microdosing marfa mustache church-key organic."], ["keyword", "williamsburg"], ["pt_value", 4], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.949443"], ["updated_at", "2016-03-10 18:18:35.949443"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Irony lumbersexual paleo gastropub pork belly viral kitsch wolf."], ["keyword", "actually"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.952022"], ["updated_at", "2016-03-10 18:18:35.952022"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Before they sold out next level paleo kinfolk master locavore cred gentrify."], ["keyword", "asymmetrical"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.954666"], ["updated_at", "2016-03-10 18:18:35.954666"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Deep v shabby chic williamsburg helvetica migas small batch."], ["keyword", "keffiyeh"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.957725"], ["updated_at", "2016-03-10 18:18:35.957725"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Yuccie plaid pbr&b biodiesel narwhal."], ["keyword", "cold-pressed"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.960493"], ["updated_at", "2016-03-10 18:18:35.960493"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Pug vice listicle polaroid."], ["keyword", "swag"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.963189"], ["updated_at", "2016-03-10 18:18:35.963189"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Raw denim single-origin coffee jean shorts tofu."], ["keyword", "selfies"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.965853"], ["updated_at", "2016-03-10 18:18:35.965853"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Gastropub stumptown vinyl crucifix kogi plaid butcher thundercats."], ["keyword", "butcher"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.968469"], ["updated_at", "2016-03-10 18:18:35.968469"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Post-ironic street kinfolk seitan normcore blue bottle."], ["keyword", "cred"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.971108"], ["updated_at", "2016-03-10 18:18:35.971108"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Viral artisan art party tousled squid flexitarian small batch normcore keytar."], ["keyword", "squid"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.973730"], ["updated_at", "2016-03-10 18:18:35.973730"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Fixie pitchfork wes anderson five dollar toast fap heirloom hammock distillery deep v."], ["keyword", "cliche"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.976352"], ["updated_at", "2016-03-10 18:18:35.976352"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Semiotics twee scenester shoreditch freegan food truck pop-up forage."], ["keyword", "pabst"], ["pt_value", 3], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.979161"], ["updated_at", "2016-03-10 18:18:35.979161"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Cronut cardigan twee vice seitan kogi fingerstache hammock."], ["keyword", "lo-fi"], ["pt_value", 4], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.981889"], ["updated_at", "2016-03-10 18:18:35.981889"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Farm-to-table scenester yolo bicycle rights kogi tousled ramps direct trade beard."], ["keyword", "listicle"], ["pt_value", 3], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.984599"], ["updated_at", "2016-03-10 18:18:35.984599"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Lo-fi pug vinegar wayfarers green juice banjo."], ["keyword", "Yuccie"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.987355"], ["updated_at", "2016-03-10 18:18:35.987355"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Portland shoreditch dreamcatcher ugh seitan you probably haven't heard of them meggings ramps."], ["keyword", "cred"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.990593"], ["updated_at", "2016-03-10 18:18:35.990593"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Green juice poutine viral cronut whatever chia quinoa."], ["keyword", "YOLO"], ["pt_value", 1], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.993611"], ["updated_at", "2016-03-10 18:18:35.993611"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Church-key raw denim hoodie yuccie direct trade trust fund etsy park."], ["keyword", "iPhone"], ["pt_value", 2], ["game_id", 1], ["created_at", "2016-03-10 18:18:35.996526"], ["updated_at", "2016-03-10 18:18:35.996526"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Kickstarter skateboard kale chips quinoa put a bird on it xoxo pug."], ["keyword", "cred"], ["pt_value", 2], ["game_id", 2], ["created_at", "2016-03-10 18:18:35.999266"], ["updated_at", "2016-03-10 18:18:35.999266"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Pickled whatever carry vinyl."], ["keyword", "cliche"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.002142"], ["updated_at", "2016-03-10 18:18:36.002142"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["text", "Listicle authentic chillwave seitan."], ["keyword", "freegan"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.004974"], ["updated_at", "2016-03-10 18:18:36.004974"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "clues" ("text", "keyword", "pt_value", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["text", "Bicycle rights irony williamsburg ugh tousled kogi pop-up."], ["keyword", "keffiyeh"], ["pt_value", 1], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.007682"], ["updated_at", "2016-03-10 18:18:36.007682"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marquis Carter"], ["phone", "1-819-655-8116"], ["created_at", "2016-03-10 18:18:36.020800"], ["updated_at", "2016-03-10 18:18:36.020800"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Arnold Schulist II"], ["phone", "197.640.7760 x560"], ["created_at", "2016-03-10 18:18:36.024605"], ["updated_at", "2016-03-10 18:18:36.024605"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Nellie Carroll"], ["phone", "(751) 636-7178"], ["created_at", "2016-03-10 18:18:36.027690"], ["updated_at", "2016-03-10 18:18:36.027690"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Jana McDermott"], ["phone", "1-882-425-6919 x0739"], ["created_at", "2016-03-10 18:18:36.030402"], ["updated_at", "2016-03-10 18:18:36.030402"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "players" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jarret Douglas DDS"], ["phone", "(159) 150-4637"], ["created_at", "2016-03-10 18:18:36.033135"], ["updated_at", "2016-03-10 18:18:36.033135"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "hermistonskiles"], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.046996"], ["updated_at", "2016-03-10 18:18:36.046996"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "cormier"], ["game_id", 2], ["created_at", "2016-03-10 18:18:36.050996"], ["updated_at", "2016-03-10 18:18:36.050996"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "jast"], ["game_id", 2], ["created_at", "2016-03-10 18:18:36.053720"], ["updated_at", "2016-03-10 18:18:36.053720"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "hahn"], ["game_id", 2], ["created_at", "2016-03-10 18:18:36.056466"], ["updated_at", "2016-03-10 18:18:36.056466"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "murazik"], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.059091"], ["updated_at", "2016-03-10 18:18:36.059091"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "gibsonroob"], ["game_id", 2], ["created_at", "2016-03-10 18:18:36.061658"], ["updated_at", "2016-03-10 18:18:36.061658"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["url_ext", "maggio"], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.064222"], ["updated_at", "2016-03-10 18:18:36.064222"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rounds" ("url_ext", "game_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["url_ext", "langosh"], ["game_id", 1], ["created_at", "2016-03-10 18:18:36.066831"], ["updated_at", "2016-03-10 18:18:36.066831"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/games" for ::1 at 2016-03-10 10:19:16 -0800
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.7ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (2.1ms)
+  Rendered devise/shared/_session_links.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:19:16 -0800
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:19:30 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mClue Load (0.8ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  Rendered games/show.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.1ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17: 	<% @game.clues.reverse.each do |clue| %>
+    18: 			<li><%= clue.text %> <br>
+    19: 			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
+    20: 			<% if current_user.id == clue.user.id %>
+    21: 				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
+    22: 				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
+    23: 			<% end %>
+  app/views/games/show.html.erb:20:in `block in _app_views_games_show_html_erb__1860882507030313203_70203048501780'
+  app/views/games/show.html.erb:17:in `each'
+  app/views/games/show.html.erb:17:in `_app_views_games_show_html_erb__1860882507030313203_70203048501780'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (96.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (218.8ms)
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:21:44 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered clues/_new.html.erb (2.3ms)
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered games/show.html.erb within layouts/application (58.5ms)
+  Rendered devise/shared/_session_links.html.erb (0.7ms)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:21:44 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:21:45 -0800
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:23:04 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 2]]
+  Rendered games/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17: 	<% @game.clues.reverse.each do |clue| %>
+    18: 			<li><%= clue.text %> <br>
+    19: 			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
+    20: 			<% if current_user.id == clue.user.id %>
+    21: 				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
+    22: 				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
+    23: 			<% end %>
+  app/views/games/show.html.erb:20:in `block in _app_views_games_show_html_erb__1860882507030313203_70203060737480'
+  app/views/games/show.html.erb:17:in `each'
+  app/views/games/show.html.erb:17:in `_app_views_games_show_html_erb__1860882507030313203_70203060737480'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (114.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (259.9ms)
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:23:42 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  Rendered games/show.html.erb within layouts/application (8.9ms)
+  Rendered devise/shared/_session_links.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:23:42 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:23:42 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:23:42 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:23:42 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:23:42 -0800
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:23:43 -0800
+
+
+Started GET "/games/2/sample-board" for ::1 at 2016-03-10 10:23:50 -0800
+Processing by GamesController#sample_board as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (1.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mClue Exists (0.2ms)[0m  SELECT  1 AS one FROM "clues" WHERE "clues"."game_id" = $1 LIMIT 1  [["game_id", 2]]
+  [1m[36mClue Load (0.3ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 2]]
+  Rendered games/sample_board.html.erb within layouts/application (1.9ms)
+  Rendered devise/shared/_session_links.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 47.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:28:15 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mGame Load (0.6ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  Rendered games/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17: 	<% @game.clues.reverse.each do |clue| %>
+    18: 			<li><%= clue.text %> <br>
+    19: 			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
+    20: 			<% if current_user.id &&= clue.user.id %>
+    21: 				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
+    22: 				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
+    23: 			<% end %>
+  app/views/games/show.html.erb:20:in `block in _app_views_games_show_html_erb__1860882507030313203_70203051068260'
+  app/views/games/show.html.erb:17:in `each'
+  app/views/games/show.html.erb:17:in `_app_views_games_show_html_erb__1860882507030313203_70203051068260'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (98.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (218.2ms)
+
+
+Started GET "/games/2" for ::1 at 2016-03-10 10:29:56 -0800
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 2]]
+  Rendered games/show.html.erb within layouts/application (8.3ms)
+  Rendered devise/shared/_session_links.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
+
+
+Started GET "/assets/application.self-65c9c572eff6e762ff142df02efa22bcfafdaffaa876d313c7284470731dcacd.js?body=1" for ::1 at 2016-03-10 10:29:57 -0800
