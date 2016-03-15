@@ -1,0 +1,6 @@
+<li><%= clue.text %> <br>
+			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
+			<% if current_user && current_user.id == clue.user.id %>
+				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
+				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
+			<% end %>

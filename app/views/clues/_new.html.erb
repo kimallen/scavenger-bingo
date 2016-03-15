@@ -1,5 +1,6 @@
 
 <div id="add_clue">
+<%= flash[:clue_error] %>
 	<%= form_for :clue, url: game_clues_path(@game.id), html: {id: "add_clue_form"} do |f| %>
 		<%= f.hidden_field :game_id, value: @game.id %>
 		<%= f.label :text %>

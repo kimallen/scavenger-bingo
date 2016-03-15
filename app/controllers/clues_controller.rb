@@ -7,9 +7,11 @@ class CluesController < ApplicationController
 		@game = Game.find(params[:game_id])
 		@clue = Clue.new(clue_params)
 		if @clue.save
-			redirect_to game_path(@game)
+			render partial: "show", locals: {clue: @clue}, layout: false
 		else
-			render :new
+			p "in else for error"
+			flash[:clue_error] = "Fields must not be blank"
+			render "games/show", layout: false
 		end
 	end
 

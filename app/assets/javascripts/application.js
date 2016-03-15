@@ -4,22 +4,27 @@
 
 //= require_tree .
 $(document).ready(function(){
-clueFormListener()
+console.log("inside docready")
+FormListener("#add_clue", "#add_clue_form")
 
 })
 
-function clueFormListener(){
+function FormListener(anchor, formName){
 	
-	$("#add_clue").on("submit", "#add_clue_form", function(e){
+	$(anchor).on("submit", formName, function(e){
 		e.preventDefault();
-		
-		var route = 
+		// console.log("prevented default")
+		var route = $(this).attr('action')
 		var formData = $(this).serialize()
+		
 		var request = $.ajax({
-				url: route,
-				method: 'post',
-				data: formData
-
+									url: route,
+									method: 'post',
+									data: formData
+									})
+		request.done(function(response){
+			console.log("This is the response" + response)
+			$("#clue_list").prepend(response)
 		})
 	})
 }
