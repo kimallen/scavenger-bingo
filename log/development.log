@@ -14661,3 +14661,72 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-72bec9d994330d4a34c1c2345b188e58a7788591a5d6d039e72f2ccd1a4434a1.js?body=1&_=1458074928119" for ::1 at 2016-03-15 13:49:07 -0700
+  [1m[36mUser Load (5.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mGame Load (1.9ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mClue Load (17.6ms)[0m  SELECT  "clues".* FROM "clues"  ORDER BY "clues"."id" DESC LIMIT 1
+  [1m[36mClue Load (0.6ms)[0m  [1mSELECT  "clues".* FROM "clues"  ORDER BY "clues"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mClue Load (0.5ms)[0m  [1mSELECT  "clues".* FROM "clues"  ORDER BY "clues"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mGame Load (1.0ms)[0m  SELECT "games".* FROM "games" WHERE "games"."user_id" = $1  [["user_id", 3]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mClue Load (0.8ms)[0m  SELECT "clues".* FROM "clues" INNER JOIN "games" ON "clues"."game_id" = "games"."id" WHERE "games"."user_id" = $1  [["user_id", 3]]
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."user_id" = $1  [["user_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  [1m[35mGame Load (0.9ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."name" = $1[0m  [["name", "totoot"]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT  "games".* FROM "games"  ORDER BY "games"."id" DESC LIMIT 1
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games"  ORDER BY "games"."id" DESC LIMIT 1[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (1.8ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "clues"[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  [1m[35mGame Load (0.7ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  [1m[35mGame Load (0.8ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  [1m[35mGame Load (0.8ms)[0m  SELECT "games".* FROM "games"
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 3]]
+  [1m[35mGame Load (0.9ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.7ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mClue Load (0.8ms)[0m  [1mSELECT "clues".* FROM "clues"[0m
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mGame Load (0.7ms)[0m  SELECT  "games".* FROM "games"  ORDER BY "games"."id" ASC LIMIT 1
+  [1m[36mClue Load (0.3ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 1]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
