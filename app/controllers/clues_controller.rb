@@ -11,7 +11,7 @@ class CluesController < ApplicationController
 		else
 			p "in else for error"
 			flash[:clue_error] = "Fields must not be blank"
-			render "games/show", layout: false
+			render partial: "new", layout: false
 		end
 	end
 
