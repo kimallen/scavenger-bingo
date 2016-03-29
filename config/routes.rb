@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :games do
     resources :clues
   end
+  
   resources :rounds
   
   devise_for :users

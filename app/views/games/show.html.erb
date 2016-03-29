@@ -8,21 +8,29 @@
 <p><%= link_to "Back to Games", games_path %></p>
 <p><%= flash[:error] %></p>
 <p><a href="/games/<%= @game.id %>/sample-board">Sample Board</a></p>
-
-<h3>The clue list:</h3>
-<% if current_user && current_user == @game.user %>
-	<%= render "clues/new" %>
-<% end %>
+<div id="clue_section">
+	<h3>The clue list:</h3>
+	<div id="form_and_clue">
+		<% if current_user && current_user == @game.user %>
+			<%= render "clues/new" %>
+		<% end %>
+</div>
+	
 	<ul id='clue_list'>	
-	<% @game.clues.reverse.each do |clue| %>
-			<li><%= clue.text %> <br>
-			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %></li>
-			<% if current_user && current_user.id == clue.user.id %>
-				<%= link_to "Edit", edit_game_clue_path(@game, clue) %>
-				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete %>
-			<% end %>
-	<% end %>
-</ul>
+		<% @game.clues.reverse.each do |clue| %>
+		<!-- why is local variable clue not recognized when rendered? -->
+			<%#= render 'clues/show' %>
 
+			<li><%= clue.text %> <br>
+				Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %>
+
+				<% if current_user && current_user.id == clue.user.id %>
+					<%= button_to "Edit", edit_game_clue_path(@game, clue), id: "edit_button" %>
+					<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete, id: "delete_button" %>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+</div>
 
 	
