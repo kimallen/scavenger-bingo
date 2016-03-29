@@ -2,7 +2,7 @@
 <h2>Theme: <%= @game.theme %></h2>
 <p>Creator: <%= @game.user.email %></p>
 
-<% if current_user %>
+<% if current_user && current_user == @game.user %> %>
 	<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
 	<% end %>
 <p><%= link_to "Back to Games", games_path %></p>
