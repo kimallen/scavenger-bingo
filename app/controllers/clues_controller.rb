@@ -21,7 +21,7 @@ class CluesController < ApplicationController
 	end
 
 	def edit
-		@game = Game.find(params[:game_id])
+		# @game = Game.find(params[:game_id])
 		@clue = Clue.find(params[:id])
 		render partial: "edit", layout: false
 	end

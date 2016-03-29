@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :games do
-    resources :clues
+    #SHALLOW: for clues, only index, new, create are nested
+    #SHALLOW: not nested for clues: :show, :edit, :update, :destroy
+    resources :clues, shallow: true
   end
   
   resources :rounds

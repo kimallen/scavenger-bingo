@@ -42,6 +42,7 @@ function formListener(anchor, formName){
 function editLink(anchor, buttonName){
 	$(anchor).on("click", buttonName, function(e){
 		e.preventDefault();
+		debugger
 		var route = $(this).parent().attr('action')
 		var that = $(this)
 		var request = $.ajax({
@@ -58,7 +59,7 @@ function editFormListener(anchor, formName){
 	$(anchor).on("submit", formName, function(e){
 		e.preventDefault();
 		console.log("inside preventDefault")
-		debugger
+		// debugger
 		var route = $(this).attr('action')
 		var formData = $(this).serialize()
 		var that = $(this)

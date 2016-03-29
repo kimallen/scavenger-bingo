@@ -26006,3 +26006,1262 @@ ActionController::RoutingError (No route matches [PATCH] "/games/5/clues/67/edit
   Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
   Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
   Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (236.7ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:29:48 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.0ms)
+  [1m[35mClue Load (0.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (80.2ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 6.5ms)
+
+ActionView::Template::Error (undefined method `edit_game_clue_path' for #<#<Class:0x007fa7dd658420>:0x007fa7dd64d9f8>):
+    25: 				Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %>
+    26: 
+    27: 				<% if current_user && current_user.id == clue.user.id %>
+    28: 					<%= button_to "Edit", edit_game_clue_path(@game, clue), id: "edit_button" %>
+    29: 					<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete, id: "delete_button" %>
+    30: 				<% end %>
+    31: 			</li>
+  app/views/games/show.html.erb:28:in `block in _app_views_games_show_html_erb___646086062263788752_70179500638040'
+  app/views/games/show.html.erb:20:in `each'
+  app/views/games/show.html.erb:20:in `_app_views_games_show_html_erb___646086062263788752_70179500638040'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (135.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (113.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (248.7ms)
+
+
+Started GET "/games/5/clues/62/edit" for ::1 at 2016-03-29 12:30:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/games/5/clues/62/edit"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (184.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (100.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (224.7ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:30:41 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (0.7ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered clues/_new.html.erb (2.3ms)
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (54.7ms)
+  Rendered devise/shared/_session_links.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 99.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/assets/application.self-06d261e9d16f1f1381881db0c40dc23bd15d6efc657750bacecafa1b7dfac03d.js?body=1" for ::1 at 2016-03-29 12:30:42 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:30:47 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=):
+  app/controllers/clues_controller.rb:24:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (113.5ms)
+
+
+Started GET "/clues/66/edit" for ::1 at 2016-03-29 12:36:44 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"66"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=):
+  app/controllers/clues_controller.rb:24:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (115.6ms)
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:36:53 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=):
+  app/controllers/clues_controller.rb:24:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (111.4ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:38:37 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered clues/_new.html.erb (3.1ms)
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.7ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (55.0ms)
+  Rendered devise/shared/_session_links.html.erb (0.4ms)
+Completed 200 OK in 192ms (Views: 187.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:38:37 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:38:38 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:43:02 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=):
+  app/controllers/clues_controller.rb:24:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (113.3ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:43:05 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered clues/_new.html.erb (1.9ms)
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (61.3ms)
+  Rendered devise/shared/_session_links.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 103.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:05 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:06 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:06 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:06 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:43:06 -0700
+
+
+Started POST "/games/edit_button" for ::1 at 2016-03-29 12:43:09 -0700
+
+ActionController::RoutingError (No route matches [POST] "/games/edit_button"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (180.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (102.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (227.0ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:43:48 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (3.3ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (70.2ms)
+  Rendered devise/shared/_session_links.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 115.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:48 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:49 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:49 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:43:49 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:43:49 -0700
+
+
+Started GET "/clues/64/edit" for ::1 at 2016-03-29 12:44:41 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"64"}
+  [1m[35mGame Load (1.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=):
+  app/controllers/clues_controller.rb:24:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (115.0ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:48:12 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.4ms)
+  [1m[35mClue Load (0.3ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (95.1ms)
+  Rendered devise/shared/_session_links.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 137.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:48:13 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:48:17 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[35mClue Load (2.9ms)[0m  SELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1  [["id", 67]]
+  Rendered clues/_edit.html.erb (53.8ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 2.9ms)
+
+ActionView::Template::Error (undefined method `game_clue_path' for #<#<Class:0x007fa7de1abed0>:0x007fa7de1aae18>):
+    1: <div id="add_clue">
+    2: <%= flash[:clue_error] %>
+    3: 	<%= form_for :clue, url: game_clue_path(@game, @clue), html: {id: "edit_clue_form"}, method: "patch" do |f| %>
+    4: 		<%= f.hidden_field :game_id, value: @game.id %>
+    5: 		<%= f.hidden_field :id, value: @clue.id %>
+    6: 		<%= f.label :text %>
+  app/views/clues/_edit.html.erb:3:in `_app_views_clues__edit_html_erb___3437421560389000181_70179506823120'
+  app/controllers/clues_controller.rb:26:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (74.5ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:49:07 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.1ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (57.4ms)
+  Rendered devise/shared/_session_links.html.erb (0.4ms)
+Completed 200 OK in 103ms (Views: 98.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:49:07 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:49:14 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[35mClue Load (0.6ms)[0m  SELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1  [["id", 67]]
+  Rendered clues/_edit.html.erb (26.9ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <div id="add_clue">
+    2: <%= flash[:clue_error] %>
+    3: 	<%= form_for :clue, url: clue_path(@clue), html: {id: "edit_clue_form"}, method: "patch" do |f| %>
+    4: 		<%= f.hidden_field :game_id, value: @game.id %>
+    5: 		<%= f.hidden_field :id, value: @clue.id %>
+    6: 		<%= f.label :text %>
+    7: 		<%= f.text_field :text %>
+  app/views/clues/_edit.html.erb:4:in `block in _app_views_clues__edit_html_erb___3437421560389000181_70179510047880'
+  app/views/clues/_edit.html.erb:3:in `_app_views_clues__edit_html_erb___3437421560389000181_70179510047880'
+  app/controllers/clues_controller.rb:26:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (76.6ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:49:47 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.4ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (57.8ms)
+  Rendered devise/shared/_session_links.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 107.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:49:47 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:49:51 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[35mClue Load (1.5ms)[0m  SELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1  [["id", 67]]
+  Rendered clues/_edit.html.erb (7.9ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/clues/67/edit" for ::1 at 2016-03-29 12:50:03 -0700
+
+ActionController::RoutingError (No route matches [PATCH] "/clues/67/edit"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.4ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (218.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (105.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (232.9ms)
+
+
+Started PATCH "/clues/67/edit" for ::1 at 2016-03-29 12:58:48 -0700
+
+ActionController::RoutingError (No route matches [PATCH] "/clues/67/edit"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (99.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (223.7ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:58:53 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (1.8ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (64.0ms)
+  Rendered devise/shared/_session_links.html.erb (0.6ms)
+Completed 200 OK in 111ms (Views: 107.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:58:53 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:58:57 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[35mClue Load (0.8ms)[0m  SELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1  [["id", 67]]
+  Rendered clues/_edit.html.erb (2.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/Users/kallen/code-projects/scavenger-bingo/app/views/clues/_edit.html.erb:3: syntax error, unexpected keyword_do_block
+...tml: {id: "edit_clue_form"}, do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/kallen/code-projects/scavenger-bingo/app/views/clues/_edit.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/clues/_edit.html.erb:3: syntax error, unexpected keyword_do_block
+  app/views/clues/_edit.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/clues_controller.rb:26:in `edit'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (108.7ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 12:59:39 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.1ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (57.6ms)
+  Rendered devise/shared/_session_links.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 102.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 12:59:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 12:59:40 -0700
+
+
+Started GET "/clues/67/edit" for ::1 at 2016-03-29 12:59:43 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"67"}
+  [1m[35mClue Load (1.3ms)[0m  SELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1  [["id", 67]]
+  Rendered clues/_edit.html.erb (5.4ms)
+Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 13:03:46 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered clues/_new.html.erb (2.0ms)
+  [1m[35mClue Load (0.4ms)[0m  SELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1  [["game_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (48.9ms)
+  Rendered devise/shared/_session_links.html.erb (0.3ms)
+Completed 200 OK in 121ms (Views: 117.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/clues.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/games.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/rounds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/clues.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/assets/application.self-85eddcca6726bbe9089d375c1dd91c41bacbd229644c83bb45dc140ab01f27af.js?body=1" for ::1 at 2016-03-29 13:03:46 -0700
+
+
+Started GET "/games/5" for ::1 at 2016-03-29 13:03:48 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered clues/_new.html.erb (1.9ms)
+  [1m[36mClue Load (0.4ms)[0m  [1mSELECT "clues".* FROM "clues" WHERE "clues"."game_id" = $1[0m  [["game_id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "games" ON "users"."id" = "games"."user_id" WHERE "games"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered games/show.html.erb within layouts/application (47.7ms)
+  Rendered devise/shared/_session_links.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/clues/61/edit" for ::1 at 2016-03-29 13:04:01 -0700
+Processing by CluesController#edit as */*
+  Parameters: {"id"=>"61"}
+  [1m[36mClue Load (0.7ms)[0m  [1mSELECT  "clues".* FROM "clues" WHERE "clues"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  Rendered clues/_edit.html.erb (27.6ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/clues/61/edit" for ::1 at 2016-03-29 13:04:09 -0700
+
+ActionController::RoutingError (No route matches [PATCH] "/clues/61/edit"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/kallen/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (98.6ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/kallen/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (219.9ms)
