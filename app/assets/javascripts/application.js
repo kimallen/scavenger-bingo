@@ -13,7 +13,7 @@ editFormListener("#add_clue", "#edit_clue_form")
 
 destroyClue("#clue_section", "#delete_button")
 
-newPlayerListener()
+playerFormListener("#player_list", "#add_player")
 })
 
 function clueFormListener(anchor, formName){
@@ -96,7 +96,26 @@ function destroyClue(anchor, deleteButton){
 	})
 }
 
-function newPlayerListener(){
-	$()
+function playerFormListener(anchor, formName){
+	
+	$(anchor).on("submit", formName, function(e){
+		e.preventDefault();
+		debugger
+		// console.log("prevented default")
+		var route = $(this).attr('action')
+		var formData = $(this).serialize()
+		
+		var request = $.ajax({
+									url: route,
+									method: 'post',
+									data: formData
+									})
+		request.done(function(response){
+			//success
+			$(anchor).append(response)
+			})
+			
+	})
 }
+
 
