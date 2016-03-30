@@ -5,17 +5,18 @@
 //= require_tree .
 $(document).ready(function(){
 // console.log("inside docready")
-formListener("#add_clue", "#add_clue_form")
+clueFormListener("#add_clue", "#add_clue_form")
 
 editLink("#clue_section", 
 "#edit_button")
-
 editFormListener("#add_clue", "#edit_clue_form")
 
 destroyClue("#clue_section", "#delete_button")
+
+newPlayerListener()
 })
 
-function formListener(anchor, formName){
+function clueFormListener(anchor, formName){
 	
 	$(anchor).on("submit", formName, function(e){
 		e.preventDefault();
@@ -92,6 +93,10 @@ function destroyClue(anchor, deleteButton){
 			that.parent().html(response)
 			})
 
-})
+	})
+}
+
+function newPlayerListener(){
+	$()
 }
 
