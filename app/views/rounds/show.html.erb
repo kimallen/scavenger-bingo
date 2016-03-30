@@ -1,0 +1,16 @@
+<h1>Play a Round of <%= @game.name %></h1>
+<p>This is the CODE for this round: <%= @round.url_ext %></p>
+<p>Enter the names and mobile number of the players below</p>
+
+<p><button>Add a player:</button></p>
+<div id="player_list">
+
+<%= render 'players/new' %>
+<ul>
+	<% @round.players.each do |player| %>
+		<%= render'players/show' %>
+	<% end %>
+</ul>
+</div>
+
+

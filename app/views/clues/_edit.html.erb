@@ -1,9 +1,8 @@
-
 <div id="add_clue">
 <%= flash[:clue_error] %>
-	<!-- <p>This is a new form for clue</p> -->
-	<%= form_for :clue, url: game_clues_path(@game), html: {id: "add_clue_form"} do |f| %>
-		<%= f.hidden_field :game_id, value: @game.id %>
+	<%= form_for @clue, html: {id: "edit_clue_form"} do |f| %>
+		<%#= f.hidden_field :game_id, value: @game.id %>
+		<%= f.hidden_field :id, value: @clue.id %>
 		<%= f.label :text %>
 		<%= f.text_field :text %>
 		<%= f.label :keyword %>

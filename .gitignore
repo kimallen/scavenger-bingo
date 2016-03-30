@@ -3,6 +3,7 @@
 /config/secret_token.rb
 /.bundle
 /log/*
+/log/development.log
 !/log/.keep
 /tmp
 

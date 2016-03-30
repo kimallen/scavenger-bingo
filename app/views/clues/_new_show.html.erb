@@ -1,0 +1,24 @@
+
+<div id="add_clue">
+<%= flash[:clue_error] %>
+	<%= form_for :clue, url: game_clues_path(@game.id), html: {id: "add_clue_form"} do |f| %>
+		<%= f.hidden_field :game_id, value: @game.id %>
+		<%= f.label :text %>
+		<%= f.text_field :text %>
+		<%= f.label :keyword %>
+		<%= f.text_field :keyword %>
+		<%= f.label :pt_value %>
+		<%= f.select(:pt_value, [["1", 1], ["2", 2], ["3", 3],["4", 4]]) %>
+		<%= f.submit "Add Clue" %>
+	<% end %>
+</div>
+
+	<ul>
+		<li><%= clue.text %> <br>
+			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %>
+			<% if current_user && current_user.id == clue.user.id %>
+				<%= button_to "Edit", edit_game_clue_path(@game, clue), id: "edit_button" %>
+				<%= button_to "Delete", game_clue_path(@game, clue), :method => :delete, id: "delete_button" %>
+			<% end %>
+		</li>
+	</ul>
