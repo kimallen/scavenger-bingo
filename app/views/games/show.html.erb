@@ -3,7 +3,7 @@
 <p>Creator: <%= @game.user.email %></p>
 
 <% if current_user && current_user == @game.user %>
-	<p><%= link_to "Play a Round", new_round_path %></p>
+	<p><%= link_to "Play a Round", game_rounds_path(@game), method: "create" %></p>
 	<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
 	<% end %>
 <p><%= link_to "Back to Games", games_path %></p>

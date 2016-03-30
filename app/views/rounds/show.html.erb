@@ -1,0 +1,17 @@
+<h1>Play a Round of <%= @game.name %></h1>
+<p>This is the CODE for this round: <%= @round.url_ext %></p>
+<p>Enter the names and mobile number of the players below</p>
+
+<p><button>Add a player:</button></p>
+<div id="player_list">
+<%= form_for :player, url: players_path, html: {id: "add_player"} do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :phone %>
+	<%= f.telephone_field :phone %>
+
+	<%= f.submit "Submit" %>
+<% end %>
+</div>
+
+

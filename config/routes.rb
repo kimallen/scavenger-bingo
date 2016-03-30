@@ -5,9 +5,12 @@ Rails.application.routes.draw do
     #SHALLOW: for clues, only index, new, create are nested
     #SHALLOW: not nested for clues: :show, :edit, :update, :destroy
     resources :clues, shallow: true
+    resources :rounds, shallow: true
   end
   
   resources :rounds
+  
+  resources :players
   
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
