@@ -1,0 +1,14 @@
+<div id="add_clue">
+<%= flash[:clue_error] %>
+	<%= form_for @clue, html: {id: "edit_clue_form"} do |f| %>
+		<%#= f.hidden_field :game_id, value: @game.id %>
+		<%= f.hidden_field :id, value: @clue.id %>
+		<%= f.label :text %>
+		<%= f.text_field :text %>
+		<%= f.label :keyword %>
+		<%= f.text_field :keyword %>
+		<%= f.label :pt_value %>
+		<%= f.select(:pt_value, [["1", 1], ["2", 2], ["3", 3],["4", 4]]) %>
+		<%= f.submit "Add Clue" %>
+	<% end %>
+</div>
