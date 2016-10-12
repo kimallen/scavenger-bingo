@@ -18,9 +18,13 @@ end
 
 num_players.times do
 
-	Player.create!(name: Faker::Name.name, phone: Faker::PhoneNumber.phone_number)
+	Player.create!(user_id: rand(1..num_users), name: Faker::Name.name, phone: Faker::PhoneNumber.phone_number)
 end
 
 num_rounds.times do
 	Round.create!(url_ext: Faker::Internet.domain_word, game_id: rand(1..num_games))
+end
+
+[1..num_players].each do |player|
+	PlayersRound.create!(player_id: player, round_id: rand(1..num_rounds))
 end

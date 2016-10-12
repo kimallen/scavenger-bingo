@@ -33,19 +33,19 @@ ActiveRecord::Schema.define(version: 20160926230952) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "player_rounds", force: :cascade do |t|
-    t.integer  "player_id"
-    t.integer  "round_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "players", force: :cascade do |t|
     t.string   "name"
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+  end
+
+  create_table "players_rounds", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "round_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rounds", force: :cascade do |t|
