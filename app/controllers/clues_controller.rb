@@ -1,4 +1,7 @@
 class CluesController < ApplicationController
+	
+	skip_before_filter  :verify_authenticity_token
+
 	def new
 		@clue = Clue.new
 	end
@@ -40,9 +43,12 @@ class CluesController < ApplicationController
 	end
 
 	def destroy
+		
 		@clue = Clue.find(params[:id])
+		@game = Game.find(@clue.game_id)
 		@clue.destroy
-		# redirect_to game_path(:game_id)
+		render partial: "destroy"
+		# redirect_to @game
 	end
 
 	private

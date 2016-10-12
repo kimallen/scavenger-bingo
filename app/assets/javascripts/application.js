@@ -7,8 +7,7 @@ $(document).ready(function(){
 // console.log("inside docready")
 clueFormListener("#add_clue", "#add_clue_form")
 
-editLink("#clue_section", 
-"#edit_button")
+editLink("#clue_section", "#edit_button")
 editFormListener("#add_clue", "#edit_clue_form")
 
 destroyClue("#clue_section", "#delete_button")
@@ -31,6 +30,7 @@ function clueFormListener(anchor, formName){
 									})
 		request.done(function(response){
 			//success
+			console.log("in new clue response")
 			$("#form_and_clue").html(response)
 			})
 			//fail
@@ -43,7 +43,7 @@ function clueFormListener(anchor, formName){
 function editLink(anchor, buttonName){
 	$(anchor).on("click", buttonName, function(e){
 		e.preventDefault();
-		debugger
+		
 		var route = $(this).parent().attr('action')
 		var that = $(this)
 		var request = $.ajax({
@@ -60,7 +60,7 @@ function editFormListener(anchor, formName){
 	$(anchor).on("submit", formName, function(e){
 		e.preventDefault();
 		console.log("inside preventDefault")
-		// debugger
+		debugger
 		var route = $(this).attr('action')
 		var formData = $(this).serialize()
 		var that = $(this)
@@ -71,6 +71,7 @@ function editFormListener(anchor, formName){
 									})
 		request.done(function(response){
 			//success
+			console.log("edit form info" + response)
 			that.parent().html(response)
 			})
 
@@ -80,17 +81,22 @@ function editFormListener(anchor, formName){
 function destroyClue(anchor, deleteButton){
 	$(anchor).on("click", deleteButton, function(e){
 		e.preventDefault();
-		debugger
-		// console.log("prevented default")
-		var route = $(this).parent().attr('action')		
+		
+		console.log("prevented default")
+		var route = $(this).parent().attr('action')
+		console.log(route)	
 		var that = $(this)
+		console.log(that)
+		debugger
 		var request = $.ajax({
-									url: route,
-									method: "DELETE",
+								url: route,
+								method: "DELETE",
 									})
 		request.done(function(response){
 			//success
-			that.parent().html(response)
+			console.log("response " + response)
+			// that.parent().parent().remove();
+			response.remove();
 			})
 
 	})
