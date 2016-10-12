@@ -18,7 +18,7 @@
 			Keyword: <%= clue.keyword %> <br>Value: <%= clue.pt_value %>
 			<% if current_user && current_user.id == clue.user.id %>
 				<%= button_to "Edit", edit_clue_path(clue), id: "edit_button" %>
-				<%= button_to "Delete", clue_path(clue), :method => :delete, id: "delete_button" %>
+				<%= button_to "Delete", clue_path(clue), :method => :delete, class: "delete_button" %>
 			<% end %>
 		</li>
 	</ul>

@@ -10,7 +10,7 @@ clueFormListener("#add_clue", "#add_clue_form")
 editLink("#clue_section", "#edit_button")
 editFormListener("#add_clue", "#edit_clue_form")
 
-destroyClue("#clue_section", "#delete_button")
+destroyClue("#clue_section", ".delete_button")
 
 playerFormListener("#player_list", "#add_player")
 })
