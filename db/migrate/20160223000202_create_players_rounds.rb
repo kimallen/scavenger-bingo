@@ -1,6 +1,6 @@
-class CreatePlayerRounds < ActiveRecord::Migration
+class CreatePlayersRounds < ActiveRecord::Migration
   def change
-    create_table :player_rounds do |t|
+    create_table :players_rounds do |t|
     	t.references :player, :round
       t.timestamps null: false
     end
